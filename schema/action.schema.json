@@ -1,0 +1,31 @@
+{
+  "protocol": "nostr-aop",
+  "version": 1,
+  "app": "app_id",
+
+  "auth" : {
+    "publisher" : "out_sign_but_action_sign__npubxxx",
+    "signature" : "~~~~"
+  },
+
+  "systemed" : false,
+  "systemag" : null,
+
+  "action": {
+    "id": "uuid",
+
+    "object_id": "uuid",
+
+    "type": "string",
+
+    "actor": "nostr_pubkey",
+
+    "created_at": 1710000000,
+
+    "encrypted" : false,
+
+    "metadata": {
+
+    }
+  }
+}

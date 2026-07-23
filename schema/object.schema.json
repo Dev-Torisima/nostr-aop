@@ -1,0 +1,28 @@
+{
+  "protocol": "nostr-aop",
+  "version": 1,
+  "app": "app_id",
+
+  "auth" : {
+    "publisher" : "npubxxx",
+    "signature" : "~~~~"
+  },
+
+  "object": {
+    "id": "uuid",
+
+    "type": "string",
+
+    "owner": "nostr_pubkey",
+
+    "created_at": 1710000000,
+
+    "status": "active",
+
+    "encrypted" : false,
+
+    "metadata": {
+
+    }
+  }
+}
