@@ -1,0 +1,66 @@
+import {AOPObjectData, createObject} from "./object.js";
+import type {RelayClient} from "./relay.js";
+import type {Signer} from "./crypto.js";
+import {NostrEventMapper, AOP_KIND} from "./mapper.js";
+import type {AOPHead} from "./schema.js"
+
+export class AOP {
+  constructor(
+    private mapper: NostrEventMapper,
+    private signer: Signer,
+    private relay: RelayClient,
+    public owner:string//me
+  ) {}
+
+
+  async createObjectData(head:AOPHead, input:{
+    type:string;
+    encrypted:boolean,
+    metadata?:Record<string,unknown>;
+  }) : Promise<AOPObjectData>{
+    let result = new AOPObjectData(head, this.owner, createObject({head:head,type:input.type,owner:this.owner,metadata:(input.metadata ?? {}),encrypted:input.encrypted}), this.mapper, this.signer, this.relay);
+    const unsigned =
+    this.mapper.objectToEvent(
+      result.data
+    );
+
+
+  const signed =
+    await this.signer.sign(
+      unsigned
+    );
+
+
+  await this.relay.publish(
+    signed
+  );
+
+  return result;  
+  }
+
+  async getObjectData(head:AOPHead, object_id:string, object_owner?:string) : Promise<AOPObjectData>
+  {
+    const filter = {
+  kinds: [AOP_KIND]
+};
+    const red = await this.relay.query(filter, this.mapper.create_Validator("object", head.app, object_id));
+    let correct = undefined;
+
+    red.forEach(x => 
+        {
+          if (object_owner)
+            {
+              if (x.pubkey != object_owner) return;
+            } 
+          correct = x;
+        });
+    if (!correct) throw "AOPObject is not found in this environment.";
+
+    return new AOPObjectData(head, this.owner, this.mapper.eventToObject(correct), this.mapper, this.signer, this.relay);
+  }
+
+  close()
+  {
+    this.relay.close();
+  }
+}
