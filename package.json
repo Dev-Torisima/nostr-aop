@@ -1,6 +1,6 @@
 {
   "name": "nostr-aop",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nostr-aop is applicaion Object Protocol (AOP) SDK for Nostr. It allow to build server-less apps using data transmission.",
   "scripts": {
     "build": "npm run clear && npm run build:node && npm run build:browser",
