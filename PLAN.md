@@ -1,7 +1,7 @@
 # The future plans  
 
 ## near  
-- Fix onchange()  
+-   
 
 ## slightly future  
 - Multi relay  
