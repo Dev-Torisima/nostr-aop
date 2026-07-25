@@ -2,7 +2,7 @@
 
 Application Object Protocol (AOP) SDK for Nostr.
 
-**Languages:** [English](#english) | [日本語](#日本語)
+**Languages:** [English](./README.md) | [日本語](./README_ja.md)
 
 ---
 
