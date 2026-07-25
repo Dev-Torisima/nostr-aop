@@ -52,7 +52,8 @@ MIT
 
 ## Why this exists
 
-It all started when I encountered the Nostr protocol and realized it was possible to create decentralized applications without a central server.
+It all started when I encountered the Nostr protocol and realized it was possible to create decentralized applications without a central server.  
+At that time, I wanted an easier way to build decentralized applications on Nostr the way.
 
 ---
 
