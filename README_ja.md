@@ -1,4 +1,11 @@
-#nostr-aop
+# nostr-aop
+
+Application Object Protocol (AOP) SDK for Nostr.
+
+**Languages:** [English](./README.md) | [日本語](./README_ja.md)
+
+---
+
 ## 概要
 
 nostr-aop は、Nostr上で Application Object Protocol (AOP) を実現する TypeScript SDKです。
