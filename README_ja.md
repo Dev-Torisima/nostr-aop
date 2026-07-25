@@ -8,7 +8,8 @@ Application Object Protocol (AOP) SDK for Nostr.
 
 ## 概要
 
-nostr-aop は、Nostr上で Application Object Protocol (AOP) を実現する TypeScript SDKです。
+nostr-aop は、Nostr上で 「分散アプリケーションなどの、ユーザー管理やイベント同期」 を実現する TypeScript SDKです。
+> それらの機能を Application Object Protocol (AOP) と呼んでいます。
 
 オブジェクト単位で状態同期を行い、
 
@@ -44,3 +45,14 @@ import { AOP } from "nostr-aop";
 import { AOP } from "nostr-aop/browser";
 ```
 
+---
+
+## ライセンス
+
+MIT
+
+---
+
+## 設計理由
+
+Nostr というプロトコルと出会い、中央サーバーなしで分散アプリケーションを作成できると考えたのが始まりです。
