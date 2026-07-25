@@ -6,8 +6,6 @@ Application Object Protocol (AOP) SDK for Nostr.
 
 ---
 
-# English
-
 ## Overview
 
 nostr-aop is a TypeScript SDK that implements the Application Object Protocol (AOP) over Nostr.
@@ -43,7 +41,6 @@ import { AOP } from "nostr-aop";
 ```ts
 import { AOP } from "nostr-aop/browser";
 ```
-
 
 ---
 
