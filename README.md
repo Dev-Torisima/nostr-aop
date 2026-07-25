@@ -58,7 +58,7 @@ It all started when I encountered the Nostr protocol and realized it was possibl
 
 ## Design Philosophy
 
-We build the two layer, "object" and "action".
+We build the two layer, "object" and "action".  
 "Object" is how your application is, and  "Action" is how it changed.
 
 ## How to use
