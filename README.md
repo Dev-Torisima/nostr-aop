@@ -58,8 +58,8 @@ It all started when I encountered the Nostr protocol and realized it was possibl
 
 ## Design Philosophy
 
-ObjectとActionという2つの層を考えます。  
-Objectはアプリケーションの状態を、Actionはその変化を表します。
+We build the two layer, "object" and "action".
+"Object" is how your application is, and  "Action" is how it changed.
 
 ## How to use
 
