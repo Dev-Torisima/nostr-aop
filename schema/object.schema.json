@@ -1,10 +1,10 @@
 {
   "protocol": "nostr-aop",
   "version": 1,
-  "app": "app id (uuid is recommended)",
+  "app": "app identifier (uuid is recommended)",
 
   "auth" : {
-    "publisher" : "nostr hex pubkey for auth",
+    "publisher" : "nostr hex pubkey for auth, external sign",
     "signature" : "signature for auth"
   },
 
