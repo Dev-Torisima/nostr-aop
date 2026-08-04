@@ -1,24 +1,24 @@
 {
   "protocol": "nostr-aop",
   "version": 1,
-  "app": "app_id",
+  "app": "app identifier (uuid is recommended)",
 
   "auth" : {
-    "publisher" : "out_sign_but_action_sign__npubxxx",
-    "signature" : "~~~~"
+    "publisher" : "nostr hex pubkey for auth, external sign",
+    "signature" : "signature of auth"
   },
 
   "systemed" : false,
   "systemag" : null,
 
   "action": {
-    "id": "uuid",
+    "id": "uuid of action",
 
-    "object_id": "uuid",
+    "object_id": "uuid of object belonged to",
 
-    "type": "string",
+    "type": "action type (optional name or system name)",
 
-    "actor": "nostr_pubkey",
+    "actor": "nostr hex pubkey of action actor (rarely, not equals to event-publisher)",
 
     "created_at": 1710000000,
 
