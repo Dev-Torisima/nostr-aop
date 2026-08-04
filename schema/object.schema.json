@@ -1,19 +1,19 @@
 {
   "protocol": "nostr-aop",
   "version": 1,
-  "app": "app_id",
+  "app": "app id (uuid is recommended)",
 
   "auth" : {
-    "publisher" : "npubxxx",
-    "signature" : "~~~~"
+    "publisher" : "nostr hex pubkey for auth",
+    "signature" : "signature for auth"
   },
 
   "object": {
-    "id": "uuid",
+    "id": "uuid of object",
 
-    "type": "string",
+    "type": "optional type of object",
 
-    "owner": "nostr_pubkey",
+    "owner": "nostr hex pubkey of object owner (that who creates object)",
 
     "created_at": 1710000000,
 
@@ -22,7 +22,7 @@
     "encrypted" : false,
 
     "metadata": {
-
+      
     }
   }
 }
