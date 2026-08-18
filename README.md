@@ -68,7 +68,7 @@ We build the two layer, "object" and "action".
 ```ts
 import {AOP, NostrEventMapper, NostrPrivateKeySigner, NostrToolsRelay, hexToBytes, npubToHex, nsecToHex} from "./index.js";
 
-const APP = "rock-paper-scissors"; //recommended uuid
+const APP = "rock-paper-scissors";
 const HEAD = {app:APP,auth:{publisher:npubToHex("npub")}};
 const OWNER = npubToHex("npub");
 const SECRET = nsecToHex("nsec");
